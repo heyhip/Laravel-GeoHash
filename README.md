@@ -40,6 +40,9 @@ class IndexController extends Controller
         // 参数：纬度，经度
         $geo = GeoHash::encode("69.3252", "136.2345");
         echo $geo;
+        
+        list($lat, $lng) = GeoHash::decode($geo);
+        echo $lat, ', ', $lng;
     }
 }
 
