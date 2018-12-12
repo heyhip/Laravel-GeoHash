@@ -37,8 +37,8 @@ class IndexController extends Controller
 {
     public function index()
     {
-        // 参数：纬度，经度
-        $geo = GeoHash::encode("69.3252", "136.2345");
+        // 参数：纬度，经度，长度（可选，默认为最长）
+        $geo = GeoHash::encode("69.3252", "136.2345", 9);
         echo $geo;
         
         list($lat, $lng) = GeoHash::decode($geo);
