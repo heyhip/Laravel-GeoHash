@@ -68,7 +68,7 @@ class GeoHash
     /**
      * Encode a hash from given lat and long
      */
-    public function encode($lat,$long)
+    public function encode($lat,$long,$len=0)
     {
         //how many bits does latitude need?
         $plat=$this->precision($lat);
@@ -137,7 +137,9 @@ class GeoHash
             $hash=$hash.$this->coding[$n];
         }
 
-
+        if ($len > 0) {
+            return mb_substr($hash, 0, $len);
+        }
         return $hash;
     }
 
