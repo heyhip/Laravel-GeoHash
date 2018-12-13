@@ -8,22 +8,6 @@ Laravel GeoHash LBS地理位置距离计算方法geohash，将一个经纬度信
 composer require youthage/laravel-geohash
 ```
 
-### 配置方法 ###
-
-app.php 配置如下：
-
-providers中添加
-
-```php
-Geohash\GeoHashProvider::class,
-```
-
-aliases中添加
-
-```php
-'GeoHash' => \Geohash\GeoHashFacade::class,
-```
-
 ### 使用方法 ###
 
 
