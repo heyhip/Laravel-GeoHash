@@ -16,5 +16,15 @@
         "psr-4": {
             "Geohash\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Geohash\\GeoHashProvider"
+            ],
+            "aliases": {
+                "GeoHash": "Geohash\\GeoHashFacade"
+            }
+        }
     }
 }
